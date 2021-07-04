@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Krushna Prasad Mohanty With Sub-menus | Using HTML, CSS & JQuery</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="side-bar">
+      <div class="close-btn">
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="menu">
+        <div class="item"><a href="#"><i class="fas fa-user-graduate"></i>Student</a></div>
+		 <div class="item"><a href="video.html"><i class="fas fa-calculator"></i>Lession Plan</a></div>
+		  <div class="item"><a href="#"><i class="fas fa-cogs"></i>Setting</a></div>
+        
+        
+      </div>
+    </div>
+    <section class="main">
+	<center>
+      <table>
+    <h2 align="left">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<i class="<i class="fas fa-caret-left"></i> Video</h2>
+	</table>
+	<center>
+	<table>
+    <h3 align="left">Insert URL here<h3>
+	
+	</table>
+	</center>
+	<center><b>or</b></center>
+	<center>
+	<table>
+
+	<h1>upload</h1>
+	
+	</table>
+	</center>
+	  </center>
+    </section>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+      //jquery for toggle sub menus
+      $('.sub-btn').click(function(){
+        $(this).next('.sub-menu').slideToggle();
+        $(this).find('.dropdown').toggleClass('rotate');
+      });
+
+      //jquery for expand and collapse the sidebar
+      $('.menu-btn').click(function(){
+        $('.side-bar').addClass('active');
+        $('.menu-btn').css("visibility", "hidden");
+      });
+
+      $('.close-btn').click(function(){
+        $('.side-bar').removeClass('active');
+        $('.menu-btn').css("visibility", "visible");
+      });
+    });
+    </script>
+
+  </body>
+</html>
